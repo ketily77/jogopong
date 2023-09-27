@@ -1,0 +1,83 @@
+tml, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+te
+let xRaquete = 5;
+let yRaquete = 150;
+let RaqueteComprimento = 10;
+let RaqueteAltura = 90;
+
+function draw() {
+  createCanvas(600, 400)
+}e tamanho da bolinha
+let XBolinha = 300;
+let YBolinha = 200;
+let diametro = 25;
+let raio = 12.5;
+
+//Velocidade da bolinha            
+let VelociadadeDaBolinhaX = 6;
+let velociadadeDabolinhaY = 6;
+
+  
+function draw() {
+  background(0);
+  mostraBolinha();
+  movimentoBolinha();
+  colideBorda();
+  mostraRaquete();
+  movimentaRaquete();
+  colideRaquete();
+}
+//
+function mostraBolinha() {
+  circle(XBolinha, YBolinha, diametro);
+}
+function movimentoBolinha() {
+  XBolinha+= VelocidadeDaBolinhaX;
+  YBolinha+= velocidadeDaBolinhaY;
+}
+function colideBorda() {
+  if (XBolinha > width || XBolinha < 0) {
+    VelocidadeDaBolinhaX *= -1;
+  }
+  if (YBolinha > height || YBolinha < 0) {
+    velocidadeDaBolinhaY *= -1;
+  }
+function movimentaRaquete() {
+  if(keyIsDown(UP_ARROW)) {
+    rect(xRaquete, yRaquete, Raquetecomprimento RaqueteAltura);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
